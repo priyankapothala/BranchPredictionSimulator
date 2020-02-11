@@ -1,6 +1,6 @@
 # Branch Prediction Simulator
 
-### Setting up the python virtual env
+### Setting up the python virtual env and installing dependencies
 ```sh
 $ python3 -m venv branchenv
 $ source branchenv/bin/activate
