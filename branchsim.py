@@ -78,15 +78,11 @@ class BranchPredict:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Branch Prediction Simulator',allow_abbrev=False)
-    parser.add_argument('-m',type=int,help="global branch history bits",choices=range(0, 12))
-    parser.add_argument('-n',type=int,help="predictor type (1-bit/2-bit)",choices=range(1, 3))
-    parser.add_argument('-k',type=int,help="number of LSB bits of PC to consider",choices=range(1, 13))
+    parser.add_argument('-m',type=int,help="global branch history bits",choices=range(0, 12),default=6)
+    parser.add_argument('-n',type=int,help="predictor type (1-bit/2-bit)",choices=range(1, 3),default=1)
+    parser.add_argument('-k',type=int,help="number of LSB bits of PC to consider",choices=range(1, 13),default=8)
     parser.add_argument('-f',required=True, help="input file name")
     args = parser.parse_args()
-
-    m = int(args.m) if args.m is not None else 6
-    n = int(args.n) if args.n is not None else 1
-    k = int(args.k) if args.k is not None else 8
     filename = args.f
 
     #initializing the global history table
