@@ -3,13 +3,6 @@
 - 	We	will	utilize	two	sets	of	traces	collected	from	a	run	of	gcc.	The	traces	gcc-10K.txt,	and	gcc-8M.txt and contain	~10	thousand	and	~8.5	million	entries respectively
 - A	simple	1-bit	predictor	is	(0,1)	predictor	and	simple	2-bit	predictor	is	(0,2)	predictor with	0	global	history.	Therefore,	the simulator	takes as input	a	branch	predictor	type	in	the	form	of	(m,n).
 
-### Setting up the python virtual env and installing dependencies
-```sh
-$ python3 -m venv branchenv
-$ source branchenv/bin/activate
-$ pip install -r requirements.txt
-```
-
 ### Executing the script
 ```sh
 $ python branchsim.py -f [filename] -n [n] -m [m] -k [k]
